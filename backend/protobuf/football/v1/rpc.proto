@@ -1,0 +1,13 @@
+syntax = "proto3";
+package football.v1;
+
+option go_package = "github.com/ShintaNakama/yukibu-channel/backend/rpcs/football/v1;football";
+
+import "football/v1/team.proto";
+
+service Beetle {
+  rpc GetTeams(Empty) returns (stream Team);
+  rpc GetTeam(TeamRequest) returns (Team);
+}
+
+message Empty {}

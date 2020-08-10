@@ -1,0 +1,6 @@
+syntax = "proto3";
+package shared;
+
+option go_package = "github.com/ShintaNakama/yukibu-channel/backend/rpcs/shared;shared";
+
+message Empty {}
