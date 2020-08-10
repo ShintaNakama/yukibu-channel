@@ -1,0 +1,22 @@
+syntax = "proto3";
+package football.v1;
+
+option go_package = "github.com/ShintaNakama/yukibu-channel/backend/rpcs/football/v1;football";
+
+import "football/v1/player.proto";
+
+message Team {
+  string id             = 1;
+  string name           = 2;
+  string shortName      = 3;
+  string tla            = 4;
+  string crestUrl       = 5;
+  int32  founded        = 6;
+  string venue          = 7;
+  repeated Player squad = 8;
+}
+
+message TeamRequest {
+  string id   = 1;
+  string name = 2;
+}
